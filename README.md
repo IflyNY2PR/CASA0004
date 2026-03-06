@@ -49,7 +49,7 @@ If you use this work in your research, please cite:
 
 The proliferation of urban big data presents unprecedented opportunities for understanding cities, yet the analytical methods to harness this data are often fragmented and domain-specific. Existing predictive models in urban computing are typically highly specialized, creating analytical silos that inhibit knowledge transfer and are difficult to adapt across domains such as public safety, housing and transport. 
 
-This research confronts this critical gap by developing a **generalizable, multimodal spatio-temporal deep learning framework** engineered for both high predictive performance and interpretability, capable of mastering diverse urban prediction tasks without architectural modification. The hybrid architecture fuses:
+This research confronts this critical gap by developing a generalizable, multimodal spatio-temporal deep learning framework engineered for both high predictive performance and interpretability, capable of mastering diverse urban prediction tasks without architectural modification. The hybrid architecture fuses:
 
 - **Multi-Head Graph Convolutional Network (GCN)** for spatial diffusion modeling
 - **Long Short-Term Memory (LSTM)** network for temporal dynamics
@@ -68,14 +68,14 @@ The framework was tested on three distinct urban domains in London:
 - **Transport Demand**: 48.55% overall improvement with 37.51% contribution from spatial graph
 - **Outperformed**: ARIMA, XGBoost, TabNet, and Temporal Fusion Transformer baselines
 
-The framework moves beyond prediction to explanation by incorporating **attention mechanisms** and **permutation feature importance analysis**, providing actionable insights for urban policy and planning.
+The framework moves beyond prediction to explanation by incorporating attention mechanisms and permutation feature importance analysis, providing actionable insights for urban policy and planning.
 
 ## 🎯 Research Contributions
 
 This research makes three principal contributions to urban computing and spatio-temporal modeling:
 
 ### 1. **Methodological Innovation** 
-Design and implementation of a novel, **hybrid GCN-LSTM-Attention framework** engineered specifically for generalizability across domains. The framework uniquely integrates:
+Design and implementation of a novel, hybrid GCN-LSTM-Attention framework engineered specifically for generalizability across domains. The framework uniquely integrates:
 - **Spatial**: Multi-head graph convolutions capturing non-Euclidean relationships
 - **Temporal**: LSTM networks modeling sequential dependencies  
 - **Multimodal**: Learnable gating mechanism for adaptive feature fusion
@@ -84,7 +84,7 @@ Design and implementation of a novel, **hybrid GCN-LSTM-Attention framework** en
 This unified architecture eliminates the need for task-specific modifications while maintaining domain adaptability.
 
 ### 2. **Empirical Validation**
-**First rigorous cross-domain validation** of a spatio-temporal framework demonstrating superior performance across heterogeneous urban applications:
+First rigorous cross-domain validation of a spatio-temporal framework demonstrating superior performance across heterogeneous urban applications:
 - Successfully adapted to crime (categorical diversity), housing (continuous economics), and transport (network flows)
 - Comprehensive benchmarking against established baselines (ARIMA, XGBoost, TabNet, Temporal Fusion Transformer)
 - Ablation studies isolating contributions of spatial graph (0.55%–37.51%), temporal modeling, and multimodal features (1.39%–20.02%)
@@ -99,7 +99,7 @@ Demonstration of actionable interpretability bridging predictive modeling and po
 
 ## 🗺️ Study Area
 
-The framework was evaluated using data from **Greater London**, providing a robust testbed for urban analytics with:
+The framework was evaluated using data from Greater London, providing a robust testbed for urban analytics with:
 
 - **Spatial Units**: 4,835 Lower Layer Super Output Areas (LSOAs)
 - **Population**: ~9 million residents across diverse urban contexts  
@@ -128,13 +128,13 @@ The **4,835 Lower Layer Super Output Areas (LSOAs)** serve as fundamental spatia
   <p><em>Figure 3: Detailed architecture of the Spatio-Temporal Framework showing sequential processing Stages 0-4</em></p>
 </div>
 
-The model architecture is a **four-stage hybrid system** designed to systematically process and fuse spatial, temporal, and external feature information through multiple interconnected components, enabling generalization across diverse urban prediction tasks.
+The model architecture is a four-stage hybrid system designed to systematically process and fuse spatial, temporal, and external feature information through multiple interconnected components, enabling generalization across diverse urban prediction tasks.
 
 ### Problem Formulation
 
 **Graph Definition**: Urban environment represented as undirected graph $G=(V, E)$ where:
 - $V = \{v_1, v_2, ..., v_N\}$ is the set of $N$ spatial units (LSOAs)
-- Adjacency matrix $A \in \mathbb{R}^{N \times N}$ encodes urban topology via **Queen contiguity**
+- Adjacency matrix $A \in \mathbb{R}^{N \times N}$ encodes urban topology via Queen contiguity
 
 **Spatio-Temporal Inputs**:
 - **Dynamic Temporal Features** ($X_{temp}$): Historical time-series of target variable over window length $T$
@@ -224,11 +224,11 @@ The framework is grounded in established paradigms from deep learning and urban 
 - **Attention Mechanisms**: Transformer-based selective focus enabling both performance gains and interpretability (Vaswani et al., 2017)
 - **Spatio-Temporal Graph Neural Networks**: Integration of GNNs with temporal models (e.g., DCRNN, ASTGCN) for dual-domain learning
 
-The framework combines these established components in a novel way specifically engineered for **generalizability** across diverse urban domains, addressing a critical gap where existing models remain siloed within single domains.
+The framework combines these established components in a novel way specifically engineered for generalizability across diverse urban domains, addressing a critical gap where existing models remain siloed within single domains.
 
 ## 📊 Case Studies and Experimental Design
 
-The framework's **generalizability** was rigorously tested across three heterogeneous urban prediction domains, demonstrating cross-domain applicability, robust performance, and adaptive capacity to different urban phenomena.
+The framework's generalizability was rigorously tested across three heterogeneous urban prediction domains, demonstrating cross-domain applicability, robust performance, and adaptive capacity to different urban phenomena.
 
 ### 🚔 Case Study 1: Urban Crime Forecasting
 
@@ -244,7 +244,7 @@ The framework's **generalizability** was rigorously tested across three heteroge
 - **Spatial Coverage**: All 4,835 London LSOAs
 - **Target Variable**: Crime count per LSOA per month
 - **Challenge**: High variability, non-stationary trends, seasonal patterns, spatial clustering
-- **Uniqueness**: Demonstrates model's capacity for **crime category differentiation** despite shared spatial structure
+- **Uniqueness**: Demonstrates model's capacity for crime category differentiation despite shared spatial structure
 
 **Why Crime is Ideal for Validation**:
 1. Each crime type has distinct spatial-temporal signatures
@@ -326,7 +326,7 @@ The three case studies provide complementary insights into the framework's adapt
 | **Spatial Unit** | LSOA (polygon, 4,835) | LSOA (polygon, 4,835) | Station (point, ~436) |
 | **Key Challenge** | Category differentiation | Market non-linearity | High temporal resolution |
 
-This multi-domain approach ensures framework **robustness** across:
+This multi-domain approach ensures framework robustness across:
 - **Data distributions** (count vs. continuous vs. flow)
 - **Temporal dynamics** (monthly vs. quarterly vs. daily)  
 - **Spatial patterns** (area-based clustered vs. smooth vs. network-based)
@@ -334,7 +334,7 @@ This multi-domain approach ensures framework **robustness** across:
 
 ### 📊 Multimodal Data Fusion and Feature Engineering
 
-A core innovation of this research is the **principled data fusion pipeline** that integrates heterogeneous urban datasets into a unified, model-ready feature matrix at the LSOA level.
+A core innovation of this research is the principled data fusion pipeline that integrates heterogeneous urban datasets into a unified, model-ready feature matrix at the LSOA level.
 
 **15 Static External Features** spanning five urban domains:
 
@@ -371,7 +371,7 @@ A core innovation of this research is the **principled data fusion pipeline** th
 
 ### 📊 Dataset
 
-A core innovation of this research is the **principled data fusion pipeline** that integrates heterogeneous urban datasets into a unified, model-ready feature matrix at the LSOA level. This comprehensive dataset enables robust spatio-temporal modeling across diverse urban applications.
+A core innovation of this research is the principled data fusion pipeline that integrates heterogeneous urban datasets into a unified, model-ready feature matrix at the LSOA level. This comprehensive dataset enables robust spatio-temporal modeling across diverse urban applications.
 - **Data distributions** (count vs. continuous vs. flow)
 - **Temporal dynamics** (monthly vs. quarterly vs. weekly)  
 - **Spatial patterns** (area-based vs. network-based
@@ -383,7 +383,7 @@ A core innovation of this research is the **principled data fusion pipeline** th
 | **Feature Importance** | Demographics, accessibility | Economics, amenities |
 | **Interpretability** | Policy intervention points | Market drivers |
 
-This dual-domain approach ensures the framework's **robustness** across different:
+This dual-domain approach ensures the framework's robustness across different:
 - **Data distributions** (count vs. continuous)
 - **Temporal dynamics** (monthly vs. quarterly)  
 - **Spatial patterns** (clustered vs. smooth)
@@ -391,7 +391,7 @@ This dual-domain approach ensures the framework's **robustness** across differen
 
 ## 📊 Dataset
 
-A core innovation of this research is the **principled data fusion pipeline** that integrates heterogeneous urban datasets into a unified, model-ready feature matrix at the LSOA level. This comprehensive dataset enables robust spatio-temporal modeling across diverse urban applications.
+A core innovation of this research is the principled data fusion pipeline that integrates heterogeneous urban datasets into a unified, model-ready feature matrix at the LSOA level. This comprehensive dataset enables robust spatio-temporal modeling across diverse urban applications.
 
 <div align="center">
   <img src="graph&output&publication/data_pre.png" alt="Data Processing Pipeline" width="900"/>
@@ -400,7 +400,7 @@ A core innovation of this research is the **principled data fusion pipeline** th
 
 ### 🏗️ Feature Engineering
 
-The integrated dataset comprises **15 static external features** spanning multiple urban domains.
+The integrated dataset comprises 15 static external features spanning multiple urban domains.
 
 <div align="center">
   <img src="graph&output&publication/Feature%20Correlation%20Heatmap.png" alt="Feature Correlation" width="700"/>
@@ -603,11 +603,11 @@ jupyter notebook test_full.ipynb
 
 ## 📈 Results
 
-The framework was rigorously evaluated through comprehensive ablation studies across **three** distinct urban prediction tasks, demonstrating both high accuracy and cross-domain generalizability.
+The framework was rigorously evaluated through comprehensive ablation studies across three distinct urban prediction tasks, demonstrating both high accuracy and cross-domain generalizability.
 
 ### 🚔 Case Study I: Urban Crime Forecasting
 
-The first validation tested the framework's ability to predict monthly crime counts for three prevalent categories: **Theft**, **Vehicle Offences**, and **Violence Against the Person**. These categories exhibit unique, non-stationary temporal trends with varying degrees of seasonality and volatility.
+The first validation tested the framework's ability to predict monthly crime counts for three prevalent categories: Theft, Vehicle Offences, and Violence Against the Person. These categories exhibit unique, non-stationary temporal trends with varying degrees of seasonality and volatility.
 
 #### **Quantitative Performance**
 
@@ -674,7 +674,7 @@ The final validation tested performance on network-constrained physics-based flo
 | **Full Model** | **1.4138** | **3.3166** | **48.55%** |
 
 **Key Findings:**
-- **Spatial Dominance**: Spatial graph contributed a massive **37.51%** improvement, confirming traffic is a network diffusion process.
+- **Spatial Dominance**: Spatial graph contributed a massive 37.51% improvement, confirming traffic is a network diffusion process.
 - **Superior Accuracy**: Outperformed all baselines, reducing error by 70% vs ARIMA.
 - **Network Validity**: Validated model's capability to handle graph topology distinct from area polygons.
 
@@ -701,7 +701,7 @@ A systematic analysis quantified the value added by each architectural component
 | **Violence** | 4.80% | 7.80% | **12.23%** | Balanced-Spatial |
 | **Vehicle Offences** | 1.39% | 0.55% | **1.94%** | Stochastic/Resilient |
 | **Housing Prices** | 12.01% | 3.40% | **15.01%** | Feature-Dominant |
-| **Transport Demand** | 17.66% | 37.51% | **48.55%** | **Spatial-Dominant** |
+| **Transport Demand** | 17.66% | 37.51% | **48.55%** | Spatial-Dominant |
 
 **Phenomenon Classification:**
 - **Feature-Dominant** (Housing): Intrinsic area characteristics drive prediction (hedonic model)
